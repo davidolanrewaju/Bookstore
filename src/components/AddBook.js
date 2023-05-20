@@ -1,8 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import '../styles/AddBook.css';
+import React, { useState } from 'react';
 
-const AddBook = (addBook) => {
+const AddBook = ({ addBook }) => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
 

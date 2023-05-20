@@ -1,7 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import '../styles/BookCard.css';
-const BookCard = ({ bookProp }, { delBook }) => (
+
+const BookCard = ({ bookProp, delBook }) => (
   <li className="book_list">
     {bookProp.title}
     {' '}
@@ -14,6 +15,7 @@ const BookCard = ({ bookProp }, { delBook }) => (
 
 BookCard.propTypes = {
   bookProp: PropTypes.shape({
+    id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
   }).isRequired,
