@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AddBook from './AddBook';
 import BookList from './BookList';
 
 const DisplayBooks = () => {
-  const books = [
+  const [books, setBooks] = useState([
     {
       id: 1,
       title: 'Hunger Games',
@@ -19,12 +19,27 @@ const DisplayBooks = () => {
       title: 'Harry Potter',
       author: 'J.K Rowling',
     },
-  ];
+  ]);
+
+  const delBook = (id) => {
+    setBooks([
+      ...books.filter((book) => book.id !== id),
+    ]);
+  };
+
+  const addBook = (title, author) => {
+    const newBook = {
+      id: books.length + 1,
+      title,
+      author,
+    };
+    setBooks([...books, newBook]);
+  };
 
   return (
     <div>
-      <AddBook />
-      <BookList booksProp={books} />
+      <BookList booksProp={books} delBook={delBook} />
+      <AddBook addBook={addBook} />
     </div>
   );
 };

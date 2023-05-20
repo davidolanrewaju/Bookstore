@@ -1,0 +1,51 @@
+.nav {
+  padding: 0.5rem 4rem;
+  background-color: grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+  color: white;
+  font-variant: small-caps;
+  font-weight: 800;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.links {
+  padding-left: 10rem;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.link:hover {
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+}
+
+.profile {
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
