@@ -1,0 +1,26 @@
+.add_section {
+  padding: 5rem 2rem;
+}
+
+input {
+  margin-right: 1rem;
+  padding: 6px 10px 6px 2px;
+}
+
+.submit_btn {
+  margin-left: 2rem;
+  padding: 8px 15px;
+  background-color: white;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+}
+
+select {
+  padding: 10px;
+  background-color: white;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}

@@ -1,0 +1,12 @@
+.display_text {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px 40px;
+  max-width: 60%;
+}
+
+.display_text p {
+  font-weight: 700;
+  font-size: 35px;
+  text-align: center;
+}
