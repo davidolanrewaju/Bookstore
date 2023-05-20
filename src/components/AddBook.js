@@ -1,8 +1,8 @@
-/* eslint-disable react/prop-types */
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import '../styles/AddBook.css';
 
-const AddBook = ({ addBook }) => {
+const AddBook = (addBook) => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
 
@@ -56,6 +56,10 @@ const AddBook = ({ addBook }) => {
       </div>
     </div>
   );
+};
+
+AddBook.propTypes = {
+  addBook: PropTypes.func.isRequired,
 };
 
 export default AddBook;
