@@ -1,0 +1,11 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { configureStore } from '@reduxjs/toolkit';
+import bookReducer from './books/bookSlice';
+
+const store = configureStore({
+  reducer: {
+    book: bookReducer,
+  },
+});
+
+export default store;
