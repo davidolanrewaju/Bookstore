@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, nanoid } from '@reduxjs/toolkit';
 
 const initialState = [];
 
@@ -7,8 +7,21 @@ const bookSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
-    addBook: (store, action) => {
-      store.push(action.payload);
+    addBook: {
+      reducer(store, action) {
+        store.push(action.payload);
+      },
+      prepare(title, author) {
+        return (
+          {
+            payload: {
+              id: nanoid(),
+              title,
+              author,
+            },
+          }
+        );
+      },
     },
   },
 });
