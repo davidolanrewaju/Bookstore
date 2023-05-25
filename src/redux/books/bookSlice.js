@@ -4,12 +4,12 @@ import { createSlice, nanoid } from '@reduxjs/toolkit';
 const initialState = [];
 
 const bookSlice = createSlice({
-  name: 'cart',
+  name: 'book',
   initialState,
   reducers: {
     addBook: {
-      reducer(store, action) {
-        store.push(action.payload);
+      reducer(state, action) {
+        state.push(action.payload);
       },
       prepare(title, author) {
         return (
@@ -22,6 +22,10 @@ const bookSlice = createSlice({
           }
         );
       },
+    },
+    delBook: (state, action) => {
+      const bookId = action.payload;
+      return state.filter((book) => book.id !== bookId);
     },
   },
 });
