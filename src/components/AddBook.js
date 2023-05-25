@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
 import '../styles/AddBook.css';
 import React, { useState } from 'react';
+// import { useDispatch } from 'react-redux';
+// import { nanoid } from '@reduxjs/toolkit';
+// import { addBook } from '../redux/books/bookSlice';
 
 const AddBook = ({ addBook }) => {
   const [title, setTitle] = useState('');
@@ -13,6 +16,22 @@ const AddBook = ({ addBook }) => {
       setAuthor(e.target.value);
     }
   };
+
+  // const dispatch = useDispatch();
+
+  // const onSubmit = () => {
+  //   if (title.trim() && author.trim()) {
+  //     dispatch(
+  //       addBook ({
+  //         id: nanoid,
+  //         title,
+  //         author,
+  //       });
+  //     );
+  //     setTitle('');
+  //     setAuthor('');
+  //   }
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
