@@ -1,11 +1,13 @@
 import '../styles/AddBook.css';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/bookSlice';
+import { nanoid } from '@reduxjs/toolkit';
+import { addBook, postBook } from '../redux/books/bookSlice';
 
 const AddBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
 
   const dispatch = useDispatch();
 
@@ -14,15 +16,22 @@ const AddBook = () => {
       setTitle(e.target.value);
     } else if (e.target.name === 'author') {
       setAuthor(e.target.value);
+    } else if (e.target.name === 'category') {
+      setCategory(e.target.value);
     }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title.trim() && author.trim()) {
-      dispatch(
-        addBook(title, author),
-      );
+      const formData = {
+        item_id: nanoid(),
+        title,
+        author,
+        category,
+      };
+      dispatch(addBook(formData));
+      dispatch(postBook(formData));
       setTitle('');
       setAuthor('');
     }

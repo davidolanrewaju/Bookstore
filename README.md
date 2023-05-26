@@ -51,7 +51,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# ⚔ Math Magician <a name="about-project"></a>
+# 📚 BookStore <a name="about-project"></a>
 
 **Bookstore** is a mini library CMS that keeps track of added books. It is created using React/Redux.
 
