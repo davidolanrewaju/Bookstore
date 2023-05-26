@@ -1,24 +1,43 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { delBook } from '../redux/books/bookSlice';
+import { useEffect } from 'react';
+import { delBook, getBooks, deleteBook } from '../redux/books/bookSlice';
 
 const BookList = () => {
-  const books = useSelector((state) => state.book);
+  const { books, isLoading } = useSelector((state) => state.book);
   const dispatch = useDispatch();
 
-  const deleteBook = (bookId) => {
-    dispatch(delBook(bookId));
-  };
+  useEffect(() => {
+    dispatch(getBooks());
+  }, [dispatch]);
+
+  if (isLoading) {
+    return (
+      <div className="loading">
+        <p>Loading...</p>
+      </div>
+    );
+  }
 
   return (
     <ul>
       {books.map((book) => (
-        <li key={book.id} className="book_list">
+        <li key={book.item_id} className="book_list">
           {book.title}
           {' '}
           -
           {' '}
           {book.author}
-          <button type="button" className="del_btn" onClick={() => deleteBook(book.id)}>Delete</button>
+          <button
+            type="button"
+            className="del_btn"
+            onClick={() => {
+              dispatch(delBook(book.item_id));
+              dispatch(deleteBook(book.item_id));
+            }}
+          >
+            Delete
+
+          </button>
         </li>
       ))}
     </ul>
