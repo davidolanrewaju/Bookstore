@@ -1,23 +1,28 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import BookCard from './BookCard';
+import { useSelector, useDispatch } from 'react-redux';
+import { delBook } from '../redux/books/bookSlice';
 
-const BookList = ({ booksProp, delBook }) => (
-  <ul>
-    {booksProp.map((book) => (
-      <BookCard key={book.id} bookProp={book} delBook={delBook} />
-    ))}
-  </ul>
-);
+const BookList = () => {
+  const books = useSelector((state) => state.book);
+  const dispatch = useDispatch();
 
-BookList.propTypes = {
-  booksProp: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
-  delBook: PropTypes.func.isRequired,
+  const deleteBook = (bookId) => {
+    dispatch(delBook(bookId));
+  };
+
+  return (
+    <ul>
+      {books.map((book) => (
+        <li key={book.id} className="book_list">
+          {book.title}
+          {' '}
+          -
+          {' '}
+          {book.author}
+          <button type="button" className="del_btn" onClick={() => deleteBook(book.id)}>Delete</button>
+        </li>
+      ))}
+    </ul>
+  );
 };
 
 export default BookList;
