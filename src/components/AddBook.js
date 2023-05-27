@@ -39,6 +39,7 @@ const AddBook = () => {
 
   return (
     <div className="add_section">
+      <hr />
       <div className="add">Add New Book</div>
       <div className="input_section">
         <form className="form_container" onSubmit={handleSubmit}>
@@ -58,13 +59,15 @@ const AddBook = () => {
             value={author}
             onChange={onChange}
           />
-          <select name="category" id="category" onChange={onChange}>
-            <option value="Category">Category</option>
-            <option value="Action">Action</option>
-            <option value="Romance">Romance</option>
-            <option value="Horror">Horror</option>
-            <option value="Adventure">Adventure</option>
-          </select>
+          <label htmlFor={category} className="selector">
+            <select name="category" id={category} onChange={onChange}>
+              <option value="Category">Category</option>
+              <option value="Action">Action</option>
+              <option value="Romance">Romance</option>
+              <option value="Horror">Horror</option>
+              <option value="Adventure">Adventure</option>
+            </select>
+          </label>
           <input type="submit" className="submit_btn" value="Add Book" />
         </form>
       </div>

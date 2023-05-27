@@ -3,7 +3,7 @@ import '../styles/HomePage.css';
 
 const HomePage = () => (
   <div className="display_text">
-    <p>Welcome to Bookstore</p>
+    <p>Welcome to BookStore</p>
   </div>
 );
 

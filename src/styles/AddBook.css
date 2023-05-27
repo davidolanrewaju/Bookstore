@@ -1,26 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 .add_section {
-  padding: 5rem 2rem;
+  font-family: 'Montserrat', sans-serif;
+  margin: 5rem 0 15rem 0;
 }
 
-input {
-  margin-right: 1rem;
-  padding: 6px 10px 6px 2px;
+hr {
+  color: #e8e8e8;
+  margin-top: 4rem;
+}
+
+.add {
+  padding: 1rem 6rem;
+  margin-top: 3rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #888;
+}
+
+.form_container {
+  padding: 1rem 6rem;
+  max-width: 100%;
+}
+
+.input_content {
+  margin-right: 1.5rem;
+  padding: 0.7rem 1rem 0.7rem 1.1rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  width: 18rem;
+}
+
+input::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  color: #c4c4c4;
+}
+
+.selector {
+  position: relative;
+  display: inline-block;
+}
+
+.selector select {
+  padding: 0.7rem 1rem 0.7rem 1.1rem;
+  min-height: 2.3rem;
+  width: 15rem;
+  background-color: white;
+  outline: none;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  color: #c4c4c4;
+  font-family: 'Montserrat', sans-serif;
+  appearance: none;
+}
+
+.selector::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  border: 6px solid transparent;
+  border-top-color: #c7c7c7;
+  right: 20px;
+  bottom: 10px;
 }
 
 .submit_btn {
+  width: 10rem;
+  height: 2.5rem;
   margin-left: 2rem;
-  padding: 8px 15px;
-  background-color: white;
+  padding-inline: 1.2rem 1.4rem;
+  background-color: #0290ff;
   outline: none;
   border: none;
-  border-radius: 15px;
-}
-
-select {
-  padding: 10px;
-  background-color: white;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  text-align: center;
+  border-radius: 4px;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  text-transform: uppercase;
 }
