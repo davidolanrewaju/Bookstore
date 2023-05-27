@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+
 .nav {
-  padding: 0.5rem 4rem;
-  background-color: grey;
+  font-family: 'Montserrat', sans-serif;
+  max-width: 100%;
+  margin: 0 0 2rem;
+  padding: 1rem 6rem 0.56rem 6rem;
+  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,39 +18,48 @@
 }
 
 .logo {
+  color: #0290ff;
   text-decoration: none;
-  color: white;
-  font-variant: small-caps;
-  font-weight: 800;
-  font-size: 25px;
+  font-weight: 900;
+  font-size: 1.5rem;
   cursor: pointer;
+  padding-bottom: 7px;
 }
 
 .links {
-  padding-left: 10rem;
+  padding-left: 5rem;
   display: flex;
-  gap: 3rem;
+  font-weight: 400;
+  gap: 2.4rem;
   align-items: center;
 }
 
 .link {
+  color: #121212;
   text-decoration: none;
-  color: white;
-  font-size: 18px;
+  font-size: 0.8rem;
   border-bottom: 1px solid transparent;
-  padding-bottom: 10px;
+  text-transform: uppercase;
   cursor: pointer;
+  padding-bottom: 7px;
 }
 
 .link:hover {
-  border-bottom: 1px solid white;
-  padding-bottom: 10px;
+  border-bottom: 1px solid #121212;
+  padding-bottom: 7px;
 }
 
-.profile {
-  color: white;
-  border: 1px solid white;
-  border-radius: 20px;
-  padding: 5px 10px;
+.img {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #f5f6fa;
+  border-radius: 50%;
+  margin-bottom: 7px;
+}
+
+.img svg {
+  padding: 4px;
+  color: #0290ff;
+  max-width: 25px;
   cursor: pointer;
 }

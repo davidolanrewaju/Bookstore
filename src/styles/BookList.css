@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.book_list {
+  margin: 3rem 6rem 0.5rem 6rem;
+  display: grid;
+  grid-template-columns: 45% 20% 30%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1.6rem;
+  background-color: white;
+}
+
+.book_detail {
+  margin-bottom: 1.4rem;
+}
+
+.book_category {
+  margin: 0 0 5px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 0.75rem;
+  color: #121212;
+}
+
+.book_title {
+  margin: 0 0 5px 0;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+}
+
+.book_author {
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  color: #4386bf;
+  font-size: 0.8rem;
+}
+
+.book_operations {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.btn_style {
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  color: #4386bf;
+  font-size: 0.8rem;
+}
+
+.book_remove {
+  border: none;
+  background-color: transparent;
+  border-right: 1px solid grey;
+  border-left: 1px solid grey;
+  padding: 0 1rem;
+}
+
+.complete {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.progress_bar {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 1.5rem 0 0;
+  color: #0290ff;
+}
+
+.complete_percent {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.complete_status {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin: 3px 0 0 0;
+}
+
+.chapter_details {
+  border-left: 1px solid #e8e8e8;
+  padding-left: 4rem;
+  height: 4.4rem;
+  min-height: 100%;
+}
+
+.current_chapter {
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.8rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.chapter_number {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 8px 0 25px 0;
+}
+
+.update_btn {
+  font-family: 'Roboto Slab', serif;
+  color: white;
+  font-weight: 200;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  background-color: #0290ff;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  padding: 0.6rem 1.5rem;
+}

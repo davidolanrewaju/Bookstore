@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../styles/Navigation.css';
-import React from 'react';
+import ProfileIcon from '../Icon';
 
 const Navigation = () => (
   <nav className="nav">
@@ -15,7 +15,9 @@ const Navigation = () => (
       </div>
     </div>
     <div className="right_section">
-      <p className="profile">Profile</p>
+      <div className="img">
+        <ProfileIcon />
+      </div>
     </div>
   </nav>
 );
