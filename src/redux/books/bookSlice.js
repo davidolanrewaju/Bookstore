@@ -53,15 +53,15 @@ const bookSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(getBooks.pending, (state) => {
-        state.loading = true;
+        state.isLoading = true;
         state.error = null;
       })
       .addCase(getBooks.fulfilled, (state, action) => {
-        state.loading = false;
+        state.isLoading = false;
         state.books = action.payload;
       })
       .addCase(getBooks.rejected, (state, action) => {
-        state.loading = false;
+        state.isLoading = false;
         state.error = action.error.message;
       });
   },
